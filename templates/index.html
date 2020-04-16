@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmnls:th="http://www.thymeleaf.org>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+	integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+	crossorigin="anonymous">
+</head>
+<body>
+	<div class="container mt-4">
+		<table class="table">
+			<thead>
+				<tr>
+					<th>idCliente</th>
+					<th>Tipo_Documento</th>
+					<th>Numero_Identificacion</th>
+					<th>Nombres</th>
+					<th>Apellidos</th>
+					<th>Fecha_Nacimiento</th>
+					<th>sexo</th>
+					<th>Telefono</th>
+					<th>Acciones</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="usuario:${usuarios}">
+					<td>${usuarios.idCliente}</td>
+					<td>${usuarios.Tipo_Documento}</td>
+					<td>${usuarios.Numero_Identificacion}</td>
+					<td>${usuarios.Nombres}</td>
+					<td>${usuarios.Apellidos}</td>
+					<td>${usuarios.Fecha_Nacimiento}</td>
+					<td>${usuarios.sexo}</td>
+					<td>${usuarios.Telefono}</td>
+					<td><a class="btn btn-warning">Editar</a> <a
+						class="btn btn-danger">Eliminar</a></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</body>
+</html>
