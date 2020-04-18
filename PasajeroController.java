@@ -27,4 +27,16 @@ public class PasajeroController {
 		
 		return pasajeroServiceImpl.guardarPasajero(pasajero);
 	}
+	
+	@GetMapping("/pasajeros/{numeroIdentificacion}")
+	public Pasajero clienteXID (Long numeroIdentificacion) {
+		
+		Pasajero pasajero_xid = new Pasajero();
+		
+		pasajero_xid=pasajeroServiceImpl.clientePorId(numeroIdentificacion);
+		
+		System.out.println("Pasajero seleccionado: "+ pasajero_xid);
+		
+		return pasajero_xid;
+	}
 }
