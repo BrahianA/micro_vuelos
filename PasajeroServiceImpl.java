@@ -31,8 +31,8 @@ public class PasajeroServiceImpl implements IPasajeroService {
 
 	@Override
 	public Pasajero actualizarPasajero(Pasajero pasajero) {
-		// TODO Auto-generated method stub
-		return null;
+		
+		return iPasajeroDAO.save(pasajero);
 	}
 
 	@Override
