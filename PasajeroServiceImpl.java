@@ -37,7 +37,8 @@ public class PasajeroServiceImpl implements IPasajeroService {
 
 	@Override
 	public void eliminarPasajero(Long numeroIdentificacion) {
-		// TODO Auto-generated method stub
+		
+		iPasajeroDAO.deleteById(numeroIdentificacion);
 		
 	}
 
