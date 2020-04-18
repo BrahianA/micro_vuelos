@@ -2,6 +2,7 @@ package com.example.demo.controller;
 
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -60,7 +61,11 @@ public class PasajeroController {
 	    
 	    return  pasajero_actualizado;
 		
+	}
+	
+	@DeleteMapping("/pasajeros/{numeroIdentificacion}")
+	public void eliminarPasajero (@PathVariable (name ="numeroIdentificacion")Long numeroIdentificacion) {
 		
-		
+		pasajeroServiceImpl.eliminarPasajero(numeroIdentificacion);
 	}
 }
