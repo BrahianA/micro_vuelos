@@ -25,8 +25,8 @@ public class PasajeroServiceImpl implements IPasajeroService {
 
 	@Override
 	public Pasajero clientePorId(Long numeroIdentificacion) {
-		// TODO Auto-generated method stub
-		return null;
+		
+		return iPasajeroDAO.findById(numeroIdentificacion).get();
 	}
 
 	@Override
