@@ -19,25 +19,26 @@ public class PasajeroServiceImpl implements IPasajeroService {
 
 	@Override
 	public Pasajero guardarPasajero(Pasajero pasajero) {
-		// TODO Auto-generated method stub
-		return null;
+		
+		return iPasajeroDAO.save(pasajero);
 	}
 
 	@Override
 	public Pasajero clientePorId(Long numeroIdentificacion) {
-		// TODO Auto-generated method stub
-		return null;
+		
+		return iPasajeroDAO.findById(numeroIdentificacion).get();
 	}
 
 	@Override
 	public Pasajero actualizarPasajero(Pasajero pasajero) {
-		// TODO Auto-generated method stub
-		return null;
+		
+		return iPasajeroDAO.save(pasajero);
 	}
 
 	@Override
 	public void eliminarPasajero(Long numeroIdentificacion) {
-		// TODO Auto-generated method stub
+		
+		iPasajeroDAO.deleteById(numeroIdentificacion);
 		
 	}
 
